@@ -41,5 +41,10 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
+    public function userprofiles()
+    {
+        return $this->belongsTo('App\Models\Userprofiles','idusers');
+    }
+
   
 }
